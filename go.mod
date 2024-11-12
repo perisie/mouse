@@ -1,4 +1,4 @@
-module perisie.com/mouse
+module github.com/perisie/mouse
 
 go 1.23.0
 
