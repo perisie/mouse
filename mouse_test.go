@@ -51,9 +51,8 @@ func Test_mouse_fs_parallel_write(t *testing.T) {
 	assert.True(t, ok)
 }
 
-func get_mouse_fs() Mouse {
-	var mouse Mouse
+func get_mouse_fs() *Mouse_fs {
 	_ = os.RemoveAll("data")
-	mouse = Mouse_fs_new("data")
+	mouse := Mouse_fs_new("data")
 	return mouse
 }
