@@ -6,14 +6,16 @@ import (
 )
 
 func Test_mouse_memory(t *testing.T) {
-	mouse_memory := Mouse_memory_new()
+	var mouse Mouse
 
-	_, err := mouse_memory.Get("k1")
+	mouse = Mouse_memory_new()
+
+	_, err := mouse.Get("k1")
 
 	assert.NotNil(t, err)
 
-	_ = mouse_memory.Put("k1", []byte("v1"))
-	value, _ := mouse_memory.Get("k1")
+	_ = mouse.Put("k1", []byte("v1"))
+	value, _ := mouse.Get("k1")
 
 	assert.Equal(t, "v1", string(value))
 }

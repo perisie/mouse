@@ -8,7 +8,9 @@ import (
 )
 
 func Test_mouse_fs(t *testing.T) {
-	mouse := get_mouse_fs()
+	var mouse Mouse
+
+	mouse = get_mouse_fs()
 
 	v, _ := mouse.Get("k1")
 
@@ -21,7 +23,9 @@ func Test_mouse_fs(t *testing.T) {
 }
 
 func Test_mouse_fs_parallel_write(t *testing.T) {
-	mouse := get_mouse_fs()
+	var mouse Mouse
+
+	mouse = get_mouse_fs()
 	values := map[string]bool{}
 
 	for i := 0; i < 1000; i++ {
